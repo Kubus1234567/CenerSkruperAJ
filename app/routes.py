@@ -1,8 +1,9 @@
+from flask import request, render_template, redirect, url_for
 from app import app
 from app.models.opinion import Opinion
 from app.models.product import Product
 from app.forms import ProductForm
-from flask import request, render_template, redirect, url_for
+from os import listdir
 import requests
 import json
 
@@ -29,11 +30,12 @@ def extract():
 
 @app.route('/product/<productId>')
 def product(productId):
-    pass
+    return render_template('product.html.jinja', productId=productId)
 
 @app.route('/products')
 def products():
-    pass
+    productsList = [x.split(".")[0] for x in listdir("app/opinions")]
+    return render_template('products.html.jinja', productsList=productsList)
 
 @app.route('/author')
 def author():

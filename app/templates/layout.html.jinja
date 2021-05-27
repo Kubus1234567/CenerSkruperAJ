@@ -16,13 +16,13 @@
     
     <nav class="container navbar navbar-expand-lg navbar-dark bg-dark sticky-top rounded">
         <div class="">
-            <a class="navbar-brand" href="./"> <i class="bi bi-house-fill" style="font-size: 1.5rem; color: whitesmoke;"></i> Home</a>
-            <a class="navbar-brand" href="./extract"> <i class="bi bi-cloud-arrow-down-fill" style="font-size: 1.5rem; color: whitesmoke;"></i> Extract</a>
-            <a class="navbar-brand" href="./products"> <i class="bi bi-list-stars" style="font-size: 1.5rem; color: whitesmoke;"></i> Products</a>
-            <a class="navbar-brand" href="./author"> <i class="bi bi-person-circle" style="font-size: 1.5rem; color: whitesmoke;"></i> Author</a>
+            <a class="navbar-brand" href="{{ url_for('index') }}"> <i class="bi bi-house-fill" style="font-size: 1.9rem; color:blue ;"></i> Home</a>
+            <a class="navbar-brand" href="{{ url_for('extract') }}"> <i class="bi bi-arrow-down-square" style="font-size: 1.9rem; color:red ;"></i> Extract</a>
+            <a class="navbar-brand" href="{{ url_for('products') }}"> <i class="bi bi-shop" style="font-size: 1.9rem; color: purple;"></i> Products</a>
+            <a class="navbar-brand" href="{{ url_for('author') }}"> <i class="bi bi-file-person" style="font-size: 1.9rem; color: green;"></i> Author</a>
         </div>
     </nav>
-    <div class="container" style="padding-top: 50px; padding-bottom: 100px;">
+    <div class="container" style="padding-top: 60px; padding-bottom: 110px;">
         <div class="row">
             <div class="col-md-4 col-sm-12">
                 {% block left %}
@@ -36,7 +36,7 @@
             </div>
         </div>
     </div>
-    <footer class="container fixed-bottom alert alert-info">(c) Katarzyna Wójcik, Cracow University of Economics
+    <footer class="container fixed-bottom alert alert-info">(c) Jakub Atroszczyk UEK
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
