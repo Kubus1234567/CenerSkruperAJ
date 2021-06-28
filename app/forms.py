@@ -1,12 +1,11 @@
 from wtforms import StringField, SubmitField, validators
 from flask_wtf import FlaskForm
 
-class ProductForm(FlaskForm):
-    productId = StringField(
-        'Enter product ID',
+class ShopForm(FlaskForm):
+    shopName = StringField(
+        'Enter shop name',
         [
-            validators.DataRequired(message = "Product Id must be given"),
-            validators.Length(min=8, max=8, message= "Product Id must have 8 characters"),
-            validators.Regexp(regex="^[0-9]+$", message="Product Id can contain only digits")
+            validators.DataRequired(message="Shop name must be given"),
+            validators.Length(min=1, max=99, message="Shop name must have 1-99 characters")
         ])
     submit = SubmitField('Extract')

@@ -1,0 +1,10 @@
+{% extends "layout.html.jinja" %}
+
+{% block middle %}
+    <h2> Shops </h2>
+    <ul class="list-group list-group-flush">
+    {% for shop in shopsList %}
+        <li class="list-group-item"><a href="{{url_for('shop', shopName=shop)}}">{{shop}}</a></li>
+    {% endfor %}
+    </ul>
+{% endblock middle %}
